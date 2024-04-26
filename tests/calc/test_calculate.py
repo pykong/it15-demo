@@ -18,3 +18,20 @@ from src.calc.calculate import add
 def test_add(a: int, b: int, expected: int) -> None:
     actual = add(a, b)
     assert actual == expected
+
+
+@pytest.mark.parametrize(
+    ("a", "b", "expected"),
+    [
+        (0, 0, 0),
+        (
+            1,
+            1,
+            1,
+        ),
+        (2, 2, 4),
+    ],
+)
+def test_multiply(a, b, expected) -> None:
+    actual = add(a, b)
+    assert actual == expected
